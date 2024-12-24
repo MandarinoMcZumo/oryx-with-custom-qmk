@@ -286,10 +286,18 @@ bool achordion_chord(uint16_t tap_hold_keycode,
         break;
   }
 
-  // Esto evita la regla de las manos opuestas para los clusters
-  if (other_record->event.key.row == 4 || other_record->event.key.row == 9) {
-    return true;
-  }
   // Otherwise, follow the opposite hands rule.
   return achordion_opposite_hands(tap_hold_record, other_record);
+}
+
+uint16_t achordion_timeout(uint16_t tap_hold_keycode) {
+  switch (tap_hold_keycode) {
+    case KC_ENTER:
+    case KC_TAB:
+    case KC_SPACE:
+    case KC_BSPC:
+      return 0;  // Bypass Achordion for these keys.
+  }
+
+  return 800;  // Otherwise use a timeout of 800 ms.
 }
