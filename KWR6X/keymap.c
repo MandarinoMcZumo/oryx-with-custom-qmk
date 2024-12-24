@@ -277,6 +277,15 @@ bool achordion_chord(uint16_t tap_hold_keycode,
                      uint16_t other_keycode,
                      keyrecord_t* other_record) {
 
+  // Excepciones para atajos mano izquierda
+  switch (tap_hold_keycode) {
+      case HOME_D: // D + Q, D + W, D + B
+        if (other_keycode == KC_Q || other_keycode == KC_W || other_keycode == KC_B) {
+            return true;
+        }
+        break;
+  }
+
   // Esto evita la regla de las manos opuestas para los clusters
   if (other_record->event.key.row == 4 || other_record->event.key.row == 9) {
     return true;
