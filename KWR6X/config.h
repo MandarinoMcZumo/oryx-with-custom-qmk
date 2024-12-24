@@ -12,10 +12,10 @@
 #define RGB_MATRIX_STARTUP_SPD 60
 #define ACHORDION_STREAK
 #define HOME_D MT(MOD_LGUI, KC_D)
-#define TC_01 MT(MOD_LSFT, KC_TAB)
-#define TC_02 LT(3,KC_ENTER)
-#define TC_11 LT(2,KC_SPACE)
-#define TC_12 LT(1,KC_BSPC)
+// #define TC_01 MT(MOD_LSFT, KC_TAB)
+// #define TC_02 LT(3,KC_ENTER)
+// #define TC_11 LT(2,KC_SPACE)
+// #define TC_12 LT(1,KC_BSPC)
 
 
 #undef ENABLE_RGB_MATRIX_GRADIENT_UP_DOWN
