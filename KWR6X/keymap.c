@@ -89,21 +89,19 @@ combo_t key_combos[COMBO_COUNT] = {
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case MT(MOD_LCTL, KC_A):
-            return TAPPING_TERM + 120;
+            return TAPPING_TERM + 150;
         case MT(MOD_LALT, KC_S):
-            return TAPPING_TERM + 120;
-        case MT(MOD_LSFT, KC_F):
-            return TAPPING_TERM -10;
+            return TAPPING_TERM + 130;
         case MT(MOD_LSFT, KC_TAB):
-            return TAPPING_TERM -25;
+            return TAPPING_TERM + 5;
         case MT(MOD_RSFT, KC_J):
-            return TAPPING_TERM -10;
+            return TAPPING_TERM + 20;
         case MT(MOD_RALT, KC_L):
-            return TAPPING_TERM + 120;
+            return TAPPING_TERM + 130;
         case MT(MOD_RCTL, KC_SCLN):
-            return TAPPING_TERM + 120;
+            return TAPPING_TERM + 150;
         case KC_QUOTE:
-            return TAPPING_TERM -40;
+            return TAPPING_TERM -10;
         default:
             return TAPPING_TERM;
     }
