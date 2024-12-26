@@ -277,8 +277,13 @@ bool achordion_chord(uint16_t tap_hold_keycode,
 
   // Excepciones para atajos mano izquierda
   switch (tap_hold_keycode) {
-      case HOME_D: // D + Q, D + W, D + B
-        if (other_keycode == KC_Q || other_keycode == KC_W || other_keycode == KC_B) {
+      case HOME_D: // D + Q, D + W, D + B, D + - y D + ' para quotes y underscores
+        if (other_keycode == KC_Q || other_keycode == KC_W || other_keycode == KC_B || other_keycode == KC_MINUS || other_keycode == KC_QUOTE ) {
+            return true;
+        }
+        break;
+      case HOME_J:
+        if (other_keycode == HOME_SCLN) {
             return true;
         }
         break;
